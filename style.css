@@ -1,12 +1,12 @@
 /*
 Theme Name: LOYALSYSTEMS
-Author: Timon Theme
-Author URI: https://themeforest.net/user/markhorthemes
+Author: Jamal Jones
+Author URI: 
 Version: 1
 Description: Base theme for HTML5
 Text Domain: base
 Tags: one-column, two-columns, three-columns
-Theme URI: http://markhorthemes.com/html/demo/LOYALSYSTEMS/
+Theme URI:
 */
 /*------------------------------------------------------------------
 
@@ -4546,4 +4546,38 @@ a:hover, a:focus, a.active {
   background-size: cover;
   -webkit-transition: 1s opacity;
   transition: 1s opacity;
+}
+.load-more-btn {
+  color: gold !important;
+}
+/* Active filter button styling */
+.filter-btn.active {
+  background-color: #FFD700 !important; /* Gold color */
+  color: #333 !important; /* Dark text for contrast */
+  border-color: #FFD700 !important;
+}
+
+/* Hover effect for all filter buttons */
+.filter-btn:hover {
+  background-color: #FFC000 !important; /* Slightly darker gold on hover */
+  color: #333 !important;
+}
+/* Filter buttons styling - Very rounded */
+.filter-btn {
+    border-radius: 50px !important; /* Max rounding (pill shape) */
+    padding: 8px 25px !important; /* Wider padding for pill shape */
+    transition: all 0.3s ease !important;
+    border: 1px solid #ddd !important; /* Optional border */
+}
+
+/* Active state (gold) */
+.filter-btn.active {
+    background: #FFD700 !important;
+    color: #333 !important;
+    border-color: #FFD700 !important;
+}
+
+/* Hover state */
+.filter-btn:hover {
+    background: #FFC000 !important;
 }
