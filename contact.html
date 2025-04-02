@@ -145,7 +145,7 @@
 					</div>
 					<div class="col-xs-12 col-sm-8">
 						<h3 class="marg">Get In Touch With Us</h3>
-						<p>If you have any question, Please don’t hesitate to send us a message</p>
+						<p>If you have any question, Please don't hesitate to send us a message</p>
 						<!-- Contact Form of the page -->
 						<form id="contact-form" action="https://formspree.io/f/xrbpgkba" class="contact-form" method="POST">
 							<fieldset>
@@ -158,7 +158,7 @@
 									</div>
 								</div>
 								<textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
-								<button type="submit" class="btn text-uppercase text-center md-round">Send Us</button>
+								<button type="submit" class="btn text-uppercase text-center" style="border-radius: 50px; padding: 10px 30px;">Send Us</button>
 							</fieldset>
 						</form>
 						
@@ -200,12 +200,25 @@
 			</section>
 			<!-- map sec of the page -->
 			<section class="map-sec">
-				<div class="map" data-lat="52.392363" data-lng="1.480408" data-zoom="8">
-					<div class="map-info">
-            			<h2 class="text-uppercase">Loyal Systems</h2>
-            			<address>Kisasi, Kampala <br>Uganda</address>
-        			</div>
-        		</div>
+				<iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+				src="https://www.openstreetmap.org/export/embed.html?bbox=32.5800%2C0.3460%2C32.5850%2C0.3490&amp;layer=mapnik&amp;marker=0.3476%2C32.5825" style="border: 1px solid black"></iframe>
+				<br/>
+				<small>
+					<a href="https://www.openstreetmap.org/?mlat=0.3476&amp;mlon=32.5825#map=17/0.3476/32.5825">View Larger Map</a>
+				</small>
+			</section>
+			
+			<!-- FAQ link section -->
+			<section class="faq-link-section bg-light" style="padding: 40px 0; background-color: #f8f9fa;">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 text-center">
+							<h3>Have more questions?</h3>
+							<p>Check out our Frequently Asked Questions for more information about our services and products.</p>
+							<a href="faq.html" class="btn" style="border-radius: 50px; padding: 10px 30px; margin-top: 15px; background-color: #ffc107; color: #000; border: none;">Visit FAQ Page</a>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		<!-- footer of the page -->
@@ -307,7 +320,6 @@
 			</form>
 		</div>
 	</div>
-	<script src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyDfI624nPMEKE1g3DBAHiiFOD5pb2NB5Sk"></script>
 	<!-- include jQuery -->
 	<script src="js/jquery.js"></script>
 	<!-- include jQuery -->
