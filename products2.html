@@ -35,6 +35,14 @@
 			overflow: hidden;
 			transition: all 0.3s ease;
 			background: white;
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+		}
+		
+		.product-card.visible {
+			opacity: 1;
+			transform: translateY(0);
 		}
 		
 		.product-card:hover {
@@ -90,32 +98,6 @@
 			line-height: 1.4;
 		}
 		
-		.hidden-products {
-			display: none;
-		}
-		
-		.loading-indicator {
-			text-align: center;
-			padding: 20px;
-			display: none;
-			background: white;
-		}
-		
-		.loading-spinner {
-			border: 4px solid #f3f3f3;
-			border-top: 4px solid #2a5f8a;
-			border-radius: 50%;
-			width: 30px;
-			height: 30px;
-			animation: spin 1s linear infinite;
-			margin: 0 auto;
-		}
-		
-		@keyframes spin {
-			0% { transform: rotate(0deg); }
-			100% { transform: rotate(360deg); }
-		}
-		
 		@media (max-width: 1200px) {
 			.product-grid {
 				grid-template-columns: repeat(4, 1fr);
@@ -141,10 +123,23 @@
 		@media (max-width: 576px) {
 			.product-grid {
 				grid-template-columns: 1fr;
+				gap: 15px;
 			}
 			
 			.product-image {
-				height: 200px;
+				height: 180px;
+			}
+			
+			.filter-buttons {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 8px;
+			}
+			
+			.filter-btn {
+				padding: 6px 12px;
+				font-size: 12px;
 			}
 		}
 	</style>
@@ -273,376 +268,9 @@
 			<!-- products grid section -->
 			<section class="products-section" style="padding: 0 0 50px; background: white;">
 				<div class="container">
-					<!-- First 20 products (4 rows x 5 columns) - visible by default -->
-					<div class="product-grid" id="visible-products">
-						<!-- Product 1 -->
-						<div class="product-card" data-category="gate">
-							<div class="product-image">
-								<img src="images/agate.webp" alt="Centurion Gate Motor">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Centurion D5 Gate Motor</h3>
-								<div class="product-category">Gate Motors</div>
-								<p class="product-description">Heavy-duty gate motor for sliding gates up to 800kg, with battery backup and remote control.</p>
-							</div>
-						</div>
-						
-						<!-- Product 2 -->
-						<div class="product-card" data-category="camera">
-							<div class="product-image">
-								<img src="images/CM01.png" alt="HIK Vision Camera">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">HIK Vision Dome Camera</h3>
-								<div class="product-category">CCTV Cameras</div>
-								<p class="product-description">4MP IP dome camera with night vision, weatherproof design for indoor/outdoor use.</p>
-							</div>
-						</div>
-						
-						<!-- Product 3 -->
-						<div class="product-card" data-category="gate">
-							<div class="product-image">
-								<img src="images/GM02.png" alt="Centurion D5 Gate Motor">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Centurion D5 Pro</h3>
-								<div class="product-category">Gate Motors</div>
-								<p class="product-description">Advanced gate motor with smart control features and 24V DC operation for smooth performance.</p>
-							</div>
-						</div>
-						
-						<!-- Product 4 -->
-						<div class="product-card" data-category="alarm">
-							<div class="product-image">
-								<img src="images/AM02.jpeg" alt="Fingerprint Attendance System">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Fingerprint Attendance System</h3>
-								<div class="product-category">Access Control</div>
-								<p class="product-description">Biometric time attendance system with 1000 fingerprint capacity and data export features.</p>
-							</div>
-						</div>
-						
-						<!-- Product 5 -->
-						<div class="product-card" data-category="fence">
-							<div class="product-image">
-								<img src="images/FC01.webp" alt="Razor Wire">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Concertina Razor Wire</h3>
-								<div class="product-category">Fencing</div>
-								<p class="product-description">High-security razor wire with galvanized steel construction for perimeter protection.</p>
-							</div>
-						</div>
-						
-						<!-- Product 6 -->
-						<div class="product-card" data-category="gate">
-							<div class="product-image">
-								<img src="images/GM03.jpeg" alt="Centurion D3 Gate Motor">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Centurion D3 Gate Motor</h3>
-								<div class="product-category">Gate Motors</div>
-								<p class="product-description">Compact sliding gate motor for gates up to 500kg with anti-crush safety features.</p>
-							</div>
-						</div>
-						
-						<!-- Product 7 -->
-						<div class="product-card" data-category="alarm">
-							<div class="product-image">
-								<img src="images/AM01.jpg" alt="Biometric Scanner">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Biometric Access Scanner</h3>
-								<div class="product-category">Access Control</div>
-								<p class="product-description">Multi-modal scanner supporting fingerprint, RFID card, and PIN code for secure access.</p>
-							</div>
-						</div>
-						
-						<!-- Product 8 -->
-						<div class="product-card" data-category="camera">
-							<div class="product-image">
-								<img src="images/CM02.png" alt="Alhua Camera">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Alhua PTZ Camera</h3>
-								<div class="product-category">CCTV Cameras</div>
-								<p class="product-description">Pan-Tilt-Zoom camera with 30x optical zoom and 360° continuous rotation.</p>
-							</div>
-						</div>
-						
-						<!-- Product 9 -->
-						<div class="product-card" data-category="gate">
-							<div class="product-image">
-								<img src="images/GM04.jpeg" alt="Nice Gate Motor">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Nice Swing Gate Motor</h3>
-								<div class="product-category">Gate Motors</div>
-								<p class="product-description">Swing gate operator for gates up to 3m with adjustable opening/closing speed.</p>
-							</div>
-						</div>
-						
-						<!-- Product 10 -->
-						<div class="product-card" data-category="alarm">
-							<div class="product-image">
-								<img src="images/AM03.jpeg" alt="Camera and Fingerprint Scanner">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Multi-Factor Access Terminal</h3>
-								<div class="product-category">Access Control</div>
-								<p class="product-description">Combination fingerprint reader and facial recognition with camera verification.</p>
-							</div>
-						</div>
-						
-						<!-- Product 11 -->
-						<div class="product-card" data-category="camera">
-							<div class="product-image">
-								<img src="images/CM03.jpeg" alt="HIK Vision Camera">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">HIK Vision Bullet Camera</h3>
-								<div class="product-category">CCTV Cameras</div>
-								<p class="product-description">5MP outdoor bullet camera with 50m IR night vision and vandal-proof housing.</p>
-							</div>
-						</div>
-						
-						<!-- Product 12 -->
-						<div class="product-card" data-category="fence">
-							<div class="product-image">
-								<img src="images/FC02.webp" alt="Razor Wire Rolls">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Razor Wire Coils</h3>
-								<div class="product-category">Fencing</div>
-								<p class="product-description">Pre-coiled razor wire for easy installation on walls and fences for enhanced security.</p>
-							</div>
-						</div>
-						
-						<!-- Product 13 -->
-						<div class="product-card" data-category="gate">
-							<div class="product-image">
-								<img src="images/GM05.webp" alt="Centurion Accessories">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Centurion Accessory Kit</h3>
-								<div class="product-category">Gate Motors</div>
-								<p class="product-description">Complete installation kit including rails, brackets and mounting hardware.</p>
-							</div>
-						</div>
-						
-						<!-- Product 14 -->
-						<div class="product-card" data-category="camera">
-							<div class="product-image">
-								<img src="images/CM04.webp" alt="DVR System">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">8-Channel DVR System</h3>
-								<div class="product-category">CCTV Cameras</div>
-								<p class="product-description">Digital video recorder with 2TB storage and remote viewing capability.</p>
-							</div>
-						</div>
-						
-						<!-- Product 15 -->
-						<div class="product-card" data-category="alarm">
-							<div class="product-image">
-								<img src="images/AM04.jpg" alt="Alarm Panel">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Wireless Alarm System</h3>
-								<div class="product-category">Alarm Systems</div>
-								<p class="product-description">8-zone wireless alarm panel with GSM notification and battery backup.</p>
-							</div>
-						</div>
-						
-						<!-- Product 16 -->
-						<div class="product-card" data-category="fence">
-							<div class="product-image">
-								<img src="images/FC03.webp" alt="Electric Fence">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Electric Fence Energizer</h3>
-								<div class="product-category">Fencing</div>
-								<p class="product-description">10km range electric fence charger with solar power option.</p>
-							</div>
-						</div>
-						
-						<!-- Product 17 -->
-						<div class="product-card" data-category="gate">
-							<div class="product-image">
-								<img src="images/GM06.webp" alt="Underground Gate Motor">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Centurion D6 Smart</h3>
-								<div class="product-category">Gate Motors</div>
-								<p class="product-description">The Centurion D6 Smart sliding gate motor for gates with a maximum weight of 600 kg, smartphone control and reliable battery backup.</p>
-							</div>
-						</div>
-						
-						<!-- Product 18 -->
-						<div class="product-card" data-category="camera">
-							<div class="product-image">
-								<img src="images/CM05.webp" alt="IP Camera">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">HIK Vision IP Camera</h3>
-								<div class="product-category">CCTV Cameras</div>
-								<p class="product-description">Ultra HD 8MP IP camera with wide dynamic range for challenging lighting.</p>
-							</div>
-						</div>
-						
-						<!-- Product 19 -->
-						<div class="product-card" data-category="alarm">
-							<div class="product-image">
-								<img src="images/AM05.jpg" alt="Motion Detector">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Dual-Tech Motion Sensor</h3>
-								<div class="product-category">Alarm Systems</div>
-								<p class="product-description">PIR + microwave motion detector with pet immunity up to 25kg.</p>
-							</div>
-						</div>
-						
-						<!-- Product 20 -->
-						<div class="product-card" data-category="fence">
-							<div class="product-image">
-								<img src="images/FC04.webp" alt="Fence Posts">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Galvanized Fence Posts</h3>
-								<div class="product-category">Fencing</div>
-								<p class="product-description">Heavy-duty steel posts for razor wire and electric fence installations.</p>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Next set of products (hidden initially) -->
-					<div class="product-grid hidden-products" id="hidden-products">
-						<!-- Product 21 -->
-						<div class="product-card" data-category="camera">
-							<div class="product-image">
-								<img src="images/CM06.jpg" alt="NVR System">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">16-Channel NVR System</h3>
-								<div class="product-category">CCTV Cameras</div>
-								<p class="product-description">Network video recorder supporting up to 16 IP cameras with 4K resolution.</p>
-							</div>
-						</div>
-						
-						<!-- Product 22 -->
-						<div class="product-card" data-category="alarm">
-							<div class="product-image">
-								<img src="images/AM06.jpg" alt="Glass Break Detector">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Acoustic Glass Break Detector</h3>
-								<div class="product-category">Alarm Systems</div>
-								<p class="product-description">Detects the specific frequency of breaking glass with adjustable sensitivity.</p>
-							</div>
-						</div>
-						
-						<!-- Product 23 -->
-						<div class="product-card" data-category="gate">
-							<div class="product-image">
-								<img src="images/GM07.jpg" alt="Gate Remote">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">4-Button Remote Control</h3>
-								<div class="product-category">Gate Motors</div>
-								<p class="product-description">Universal remote for gate operators with rolling code encryption.</p>
-							</div>
-						</div>
-						
-						<!-- Product 24 -->
-						<div class="product-card" data-category="fence">
-							<div class="product-image">
-								<img src="images/FC05.jpg" alt="Fence Insulators">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Electric Fence Insulators</h3>
-								<div class="product-category">Fencing</div>
-								<p class="product-description">UV-resistant plastic insulators for various mounting surfaces.</p>
-							</div>
-						</div>
-						
-						<!-- Product 25 -->
-						<div class="product-card" data-category="camera">
-							<div class="product-image">
-								<img src="images/CM07.jpg" alt="Camera Housing">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Outdoor Camera Housing</h3>
-								<div class="product-category">CCTV Cameras</div>
-								<p class="product-description">Weatherproof enclosure with heater/blower for extreme conditions.</p>
-							</div>
-						</div>
-						
-						<!-- Product 26 -->
-						<div class="product-card" data-category="alarm">
-							<div class="product-image">
-								<img src="images/AM07.jpg" alt="Door Contact">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Recessed Door Contact</h3>
-								<div class="product-category">Alarm Systems</div>
-								<p class="product-description">Hidden magnetic contact for doors and windows with surface mount option.</p>
-							</div>
-						</div>
-						
-						<!-- Product 27 -->
-						<div class="product-card" data-category="gate">
-							<div class="product-image">
-								<img src="images/GM08.jpg" alt="Gate Keypad">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Weatherproof Keypad</h3>
-								<div class="product-category">Gate Motors</div>
-								<p class="product-description">Backlit numeric keypad for gate access with 50 user codes capacity.</p>
-							</div>
-						</div>
-						
-						<!-- Product 28 -->
-						<div class="product-card" data-category="fence">
-							<div class="product-image">
-								<img src="images/FC06.jpg" alt="Fence Wire">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">High-Tensile Fence Wire</h3>
-								<div class="product-category">Fencing</div>
-								<p class="product-description">2.5mm galvanized steel wire for electric fence installations.</p>
-							</div>
-						</div>
-						
-						<!-- Product 29 -->
-						<div class="product-card" data-category="camera">
-							<div class="product-image">
-								<img src="images/CM08.jpg" alt="Camera Power Supply">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">8-Channel Camera PSU</h3>
-								<div class="product-category">CCTV Cameras</div>
-								<p class="product-description">Power supply unit for multiple cameras with individual fusing.</p>
-							</div>
-						</div>
-						
-						<!-- Product 30 -->
-						<div class="product-card" data-category="alarm">
-							<div class="product-image">
-								<img src="images/AM08.jpg" alt="Siren">
-							</div>
-							<div class="product-info">
-								<h3 class="product-name">Outdoor Alarm Siren</h3>
-								<div class="product-category">Alarm Systems</div>
-								<p class="product-description">120dB weatherproof siren with strobe light and tamper detection.</p>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Loading indicator -->
-					<div class="loading-indicator" id="loading-indicator">
-						<div class="loading-spinner"></div>
-						<p>Loading more products...</p>
+					<!-- Products container -->
+					<div class="product-grid" id="products-container">
+						<!-- Products will be loaded here by JavaScript -->
 					</div>
 				</div>
 			</section>
@@ -743,56 +371,287 @@
 	<!-- JavaScript for the products page functionality -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-			// Infinite scroll functionality
-			const hiddenProducts = document.getElementById('hidden-products');
-			const loadingIndicator = document.getElementById('loading-indicator');
-			let isLoading = false;
+			// Product data - in a real app, this would come from an API
+			const productData = [
+				{
+					id: 1,
+					name: "Centurion D5 Gate Motor",
+					category: "gate",
+					description: "Heavy-duty gate motor for sliding gates up to 800kg, with battery backup and remote control.",
+					image: "images/agate.webp"
+				},
+				{
+					id: 2,
+					name: "HIK Vision Dome Camera",
+					category: "camera",
+					description: "4MP IP dome camera with night vision, weatherproof design for indoor/outdoor use.",
+					image: "images/CM01.png"
+				},
+				{
+					id: 3,
+					name: "Centurion D5 Pro",
+					category: "gate",
+					description: "Advanced gate motor with smart control features and 24V DC operation for smooth performance.",
+					image: "images/GM02.png"
+				},
+				{
+					id: 4,
+					name: "Fingerprint Attendance System",
+					category: "alarm",
+					description: "Biometric time attendance system with 1000 fingerprint capacity and data export features.",
+					image: "images/AM02.jpeg"
+				},
+				{
+					id: 5,
+					name: "Concertina Razor Wire",
+					category: "fence",
+					description: "High-security razor wire with galvanized steel construction for perimeter protection.",
+					image: "images/FC01.webp"
+				},
+				{
+					id: 6,
+					name: "Centurion D3 Gate Motor",
+					category: "gate",
+					description: "Compact sliding gate motor for gates up to 500kg with anti-crush safety features.",
+					image: "images/GM03.jpeg"
+				},
+				{
+					id: 7,
+					name: "Biometric Access Scanner",
+					category: "alarm",
+					description: "Multi-modal scanner supporting fingerprint, RFID card, and PIN code for secure access.",
+					image: "images/AM01.jpg"
+				},
+				{
+					id: 8,
+					name: "Alhua PTZ Camera",
+					category: "camera",
+					description: "Pan-Tilt-Zoom camera with 30x optical zoom and 360° continuous rotation.",
+					image: "images/CM02.png"
+				},
+				{
+					id: 9,
+					name: "Nice Swing Gate Motor",
+					category: "gate",
+					description: "Swing gate operator for gates up to 3m with adjustable opening/closing speed.",
+					image: "images/GM04.jpeg"
+				},
+				{
+					id: 10,
+					name: "Multi-Factor Access Terminal",
+					category: "alarm",
+					description: "Combination fingerprint reader and facial recognition with camera verification.",
+					image: "images/AM03.jpeg"
+				},
+				{
+					id: 11,
+					name: "HIK Vision Bullet Camera",
+					category: "camera",
+					description: "5MP outdoor bullet camera with 50m IR night vision and vandal-proof housing.",
+					image: "images/CM03.jpeg"
+				},
+				{
+					id: 12,
+					name: "Razor Wire Coils",
+					category: "fence",
+					description: "Pre-coiled razor wire for easy installation on walls and fences for enhanced security.",
+					image: "images/FC02.webp"
+				},
+				{
+					id: 13,
+					name: "Centurion Accessory Kit",
+					category: "gate",
+					description: "Complete installation kit including rails, brackets and mounting hardware.",
+					image: "images/GM05.webp"
+				},
+				{
+					id: 14,
+					name: "8-Channel DVR System",
+					category: "camera",
+					description: "Digital video recorder with 2TB storage and remote viewing capability.",
+					image: "images/CM04.webp"
+				},
+				{
+					id: 15,
+					name: "Wireless Alarm System",
+					category: "alarm",
+					description: "8-zone wireless alarm panel with GSM notification and battery backup.",
+					image: "images/AM04.jpg"
+				},
+				{
+					id: 16,
+					name: "Electric Fence Energizer",
+					category: "fence",
+					description: "10km range electric fence charger with solar power option.",
+					image: "images/FC03.webp"
+				},
+				{
+					id: 17,
+					name: "Centurion D6 Smart",
+					category: "gate",
+					description: "The Centurion D6 Smart sliding gate motor for gates with a maximum weight of 600 kg, smartphone control and reliable battery backup.",
+					image: "images/GM06.webp"
+				},
+				{
+					id: 18,
+					name: "HIK Vision IP Camera",
+					category: "camera",
+					description: "Ultra HD 8MP IP camera with wide dynamic range for challenging lighting.",
+					image: "images/CM05.webp"
+				},
+				{
+					id: 19,
+					name: "Dual-Tech Motion Sensor",
+					category: "alarm",
+					description: "PIR + microwave motion detector with pet immunity up to 25kg.",
+					image: "images/AM05.jpg"
+				},
+				{
+					id: 20,
+					name: "Galvanized Fence Posts",
+					category: "fence",
+					description: "Heavy-duty steel posts for razor wire and electric fence installations.",
+					image: "images/FC04.webp"
+				},
+				{
+					id: 21,
+					name: "16-Channel NVR System",
+					category: "camera",
+					description: "Network video recorder supporting up to 16 IP cameras with 4K resolution.",
+					image: "images/CM06.jpg"
+				},
+				{
+					id: 22,
+					name: "Acoustic Glass Break Detector",
+					category: "alarm",
+					description: "Detects the specific frequency of breaking glass with adjustable sensitivity.",
+					image: "images/AM06.jpg"
+				},
+				{
+					id: 23,
+					name: "4-Button Remote Control",
+					category: "gate",
+					description: "Universal remote for gate operators with rolling code encryption.",
+					image: "images/GM07.jpg"
+				},
+				{
+					id: 24,
+					name: "Electric Fence Insulators",
+					category: "fence",
+					description: "UV-resistant plastic insulators for various mounting surfaces.",
+					image: "images/FC05.jpg"
+				},
+				{
+					id: 25,
+					name: "Outdoor Camera Housing",
+					category: "camera",
+					description: "Weatherproof enclosure with heater/blower for extreme conditions.",
+					image: "images/CM07.jpg"
+				},
+				{
+					id: 26,
+					name: "Recessed Door Contact",
+					category: "alarm",
+					description: "Hidden magnetic contact for doors and windows with surface mount option.",
+					image: "images/AM07.jpg"
+				},
+				{
+					id: 27,
+					name: "Weatherproof Keypad",
+					category: "gate",
+					description: "Backlit numeric keypad for gate access with 50 user codes capacity.",
+					image: "images/GM08.jpg"
+				},
+				{
+					id: 28,
+					name: "High-Tensile Fence Wire",
+					category: "fence",
+					description: "2.5mm galvanized steel wire for electric fence installations.",
+					image: "images/FC06.jpg"
+				},
+				{
+					id: 29,
+					name: "8-Channel Camera PSU",
+					category: "camera",
+					description: "Power supply unit for multiple cameras with individual fusing.",
+					image: "images/CM08.jpg"
+				},
+				{
+					id: 30,
+					name: "Outdoor Alarm Siren",
+					category: "alarm",
+					description: "120dB weatherproof siren with strobe light and tamper detection.",
+					image: "images/AM08.jpg"
+				}
+			];
 			
-			if (hiddenProducts) {
-				// Function to load more products
-				function loadMoreProducts() {
-					if (isLoading) return;
-					
-					isLoading = true;
-					loadingIndicator.style.display = 'block';
-					
-					// Simulate network delay (in real implementation, this would be an AJAX call)
-					setTimeout(function() {
-						hiddenProducts.classList.remove('hidden-products');
-						hiddenProducts.style.display = 'grid';
-						loadingIndicator.style.display = 'none';
-						isLoading = false;
-						
-						// Remove the scroll event listener after all products are loaded
-						window.removeEventListener('scroll', handleScroll);
-					}, 1000);
-				}
+			// Function to create a product card
+			function createProductCard(product) {
+				const card = document.createElement('div');
+				card.className = 'product-card';
+				card.setAttribute('data-category', product.category);
 				
-				// Function to handle scroll events
-				function handleScroll() {
-					const scrollPosition = window.innerHeight + window.scrollY;
-					const pageHeight = document.documentElement.scrollHeight;
-					const threshold = 200; // pixels from bottom to trigger load
+				card.innerHTML = `
+					<div class="product-image">
+						<img src="${product.image}" alt="${product.name}">
+					</div>
+					<div class="product-info">
+						<h3 class="product-name">${product.name}</h3>
+						<div class="product-category">${getCategoryName(product.category)}</div>
+						<p class="product-description">${product.description}</p>
+					</div>
+				`;
+				
+				return card;
+			}
+			
+			// Helper function to get category display name
+			function getCategoryName(category) {
+				const categories = {
+					'gate': 'Gate Motors',
+					'camera': 'CCTV Cameras',
+					'alarm': 'Alarm Systems',
+					'fence': 'Fencing'
+				};
+				return categories[category] || 'Products';
+			}
+			
+			// Function to load all products
+			function loadAllProducts() {
+				const productsContainer = document.getElementById('products-container');
+				
+				// Create and append all product cards (initially hidden)
+				productData.forEach((product, index) => {
+					const card = createProductCard(product);
+					productsContainer.appendChild(card);
 					
-					if (scrollPosition > pageHeight - threshold) {
-						loadMoreProducts();
-					}
-				}
+					// Add a slight delay to stagger the animations
+					setTimeout(() => {
+						// Use IntersectionObserver to animate when scrolled into view
+						observeProductCard(card);
+					}, index * 50);
+				});
+			}
+			
+			// Function to observe product cards and animate when they come into view
+			function observeProductCard(card) {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('visible');
+							observer.unobserve(entry.target);
+						}
+					});
+				}, {
+					threshold: 0.1, // Trigger when 10% of the card is visible
+					rootMargin: '0px 0px -50px 0px' // Adjust the root margin
+				});
 				
-				// Add scroll event listener
-				window.addEventListener('scroll', handleScroll);
-				
-				// Also check on initial load in case content doesn't fill the viewport
-				setTimeout(function() {
-					if (window.innerHeight >= document.documentElement.scrollHeight) {
-						loadMoreProducts();
-					}
-				}, 500);
+				observer.observe(card);
 			}
 			
 			// Filter functionality
 			const filterBtns = document.querySelectorAll('.filter-btn');
-			const productCards = document.querySelectorAll('.product-card');
 			
 			filterBtns.forEach(btn => {
 				btn.addEventListener('click', function() {
@@ -801,17 +660,25 @@
 					this.classList.add('active');
 					
 					const filter = this.getAttribute('data-filter');
+					const productCards = document.querySelectorAll('.product-card');
 					
-					// Filter products
-					productCards.forEach(card => {
-						if (filter === 'all' || card.getAttribute('data-category') === filter) {
-							card.style.display = 'block';
-						} else {
-							card.style.display = 'none';
-						}
+					// Filter products with animation
+					productCards.forEach((card, index) => {
+						setTimeout(() => {
+							if (filter === 'all' || card.getAttribute('data-category') === filter) {
+								card.style.display = 'block';
+								card.classList.add('visible');
+							} else {
+								card.style.display = 'none';
+								card.classList.remove('visible');
+							}
+						}, index * 50);
 					});
 				});
 			});
+			
+			// Initialize the page
+			loadAllProducts();
 		});
 	</script>
 	
