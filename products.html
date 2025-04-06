@@ -279,6 +279,7 @@
 								<button class="filter-btn" data-filter="camera">CCTV Cameras</button>
 								<button class="filter-btn" data-filter="alarm">Alarms & Access Control</button>
 								<button class="filter-btn" data-filter="fence">Fencing Solutions</button>
+								<button class="filter-btn" data-filter="backup">Power Backup Systems</button>
 							</div>
 						</div>
 					</div>
@@ -471,9 +472,9 @@
                 },
                 {
                     id: 12,
-                    name: "Razor Wire Coils",
+                    name: "NEMTEK Wizord 4I Energizer",
                     category: "fence",
-                    description: "Pre-coiled razor wire for easy installation on walls and fences for enhanced security.",
+                    description: "The Wizord energizers have been field tested for many years and boast unsurpassed reliability. Simple to install and easy to maintain.",
                     image: "images/FC02.webp"
                 },
                 {
@@ -499,9 +500,9 @@
                 },
                 {
                     id: 16,
-                    name: "Electric Fence Energizer",
+                    name: "Merlin 4I Fence Energizer",
                     category: "fence",
-                    description: "10km range electric fence charger with solar power option.",
+                    description: "The NEMTEK Merlin 4i includes a keypad for controlling and programming the energizer. The energizer can be installed near the fence and the keypad can be located where it is most convenient for the user.",
                     image: "images/FC03.webp"
                 },
                 {
@@ -585,7 +586,7 @@
                     id: 28,
                     name: "High-Tensile Fence Wire",
                     category: "fence",
-                    description: "2.5mm galvanized steel wire for electric fence installations.",
+                    description: "NEMTEK 2.5mm galvanized steel wire for electric fence installations.",
                     image: "images/FC06.webp"
                 },
                 {
@@ -601,6 +602,13 @@
                     category: "alarm",
                     description: "120dB weatherproof siren with strobe light and tamper detection.",
                     image: "images/AM08.jpg"
+                },
+				{
+                    id: 31,
+                    name: "Centurion Lead 12V Battery",
+                    category: "backup",
+                    description: "120dB weatherproof siren with strobe light and tamper detection.",
+                    image: "images/PB01.webp"
                 }
             ];
             
@@ -630,7 +638,8 @@
                     'gate': 'Gate Motors',
                     'camera': 'CCTV Cameras',
                     'alarm': 'Alarm Systems',
-                    'fence': 'Fencing'
+                    'fence': 'Fencing',
+					'backup': 'Power Backup'
                 };
                 return categories[category] || 'Products';
             }
