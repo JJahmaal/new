@@ -226,7 +226,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-6">
-							<p>Copyrights © Loyal Systems Uganda Limited 2025 All Rights Reserved.</p>
+							<p>Copyrights © Loyal Systems Uganda Limited <span id="year"></span> All Rights Reserved.</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 						</div>
 						<div class="col-xs-12 col-sm-6">
 							<!-- Modern SVG social links -->
