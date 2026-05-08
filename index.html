@@ -40,15 +40,15 @@
 		<link rel="manifest" href="site.webmanifest">
 
 		<!-- Safari Pinned Tab (Optional) -->
-		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#073eb7">
 
 		<!-- Microsoft Tiles (Windows 8/10) -->
-		<meta name="msapplication-TileColor" content="#FFFACD">
+		<meta name="msapplication-TileColor" content="#073eb7">
 		<meta name="msapplication-TileImage" content="mstile-144x144.png">
 		<meta name="msapplication-config" content="browserconfig.xml">
 
 		<!-- Theme Color (Mobile Browsers) -->
-		<meta name="theme-color" content="#FFFACD">
+		<meta name="theme-color" content="#073eb7">
 
 		<!-- include the site stylesheet -->
 		<link href="https://fonts.googleapis.com/css?family=Arizonia%7COpen+Sans:300,300i,400,400i,600,700,800%7CRoboto:300,400,500,700" rel="stylesheet">
@@ -119,7 +119,7 @@
 								<li><i class="icon icon_phone"></i> <a href="https://wa.me/256756813313"><strong>+256 756813313</strong></a></li>
 								<li><i class="icon icon_phone"></i> <a href="tel://0787485145"><strong>+256 787485145</strong></a></strong></a></li>
 								<li><i class="icon icon_mail"></i> <a href="mailto:info@loyalsystemsultd.com"><strong>info@loyalsystemsultd.com</strong></a></li>
-								<li><i class="icon ti-location-pin"></I><strong>Kisasi - Kampala, Uganda</strong></li>
+								<li><i class="icon ti-location-pin"></i><strong>Kisasi - Kampala, Uganda</strong></li>
 							</ul>
 							<!-- socail network of the page -->
 							<div class="social-links">
@@ -244,7 +244,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 text-center">
-							<h3 class="main-heading gold-heading">OUR SERVICES</h3>
+							<h3 class="main-heading blue-heading">OUR SERVICES</h3>
 						</div>
 						<!-- Service 1 -->
 						<div class="col-xs-12 col-sm-6 col-md-4">
@@ -300,13 +300,13 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12 text-center" style="margin-top: 40px;">
-						<a href="service" class="gold-btn">All Our Services</a>
+						<a href="service" class="blue-btn">All Our Services</a>
 					</div>
 				</div>
 			</section>
 			
 			<style>
-				/* Service Cards */
+				/* Service Cards - UPDATED TO BLUE */
 				.service-card {
 					background: #fff;
 					border-radius: 8px;
@@ -378,7 +378,7 @@
 					left: 0;
 					width: 40px;
 					height: 2px;
-					background: #FFD700;
+					background: #073eb7;
 				}
 				
 				.service-content p {
@@ -389,7 +389,7 @@
 					flex-grow: 1;
 				}
 				
-				/* Gold Buttons - Your exact styling */
+				/* Updated Buttons - BLUE THEME */
 				.btn {
 					border-radius: 50px;
 					padding: 14px 32px;
@@ -408,17 +408,28 @@
 				
 				.btn.active {
 					background: transparent;
-					border-color: #FFD700;
-					color: #FFD700;
+					border-color: #073eb7;
+					color: #073eb7;
+				}
+				
+				.btn:not(.active) {
+					background: #073eb7;
+					border-color: #073eb7;
+					color: #f0ebeb;
 				}
 				
 				.btn:hover {
 					transform: translateY(-3px);
-					box-shadow: 0 8px 20px rgba(255, 200, 0, 0.3);
+					box-shadow: 0 8px 20px rgba(7, 62, 183, 0.4);
 				}
 				
 				.btn.active:hover {
-					background: rgba(255, 215, 0, 0.15);
+					background: rgba(4, 37, 109, 0.25);
+				}
+				
+				.btn:not(.active):hover {
+					background: #04256d;
+					border-color: #04256d;
 				}
 				
 				.btn-holder {
@@ -426,29 +437,59 @@
 					justify-content: center;
 					margin-top: auto;
 				}
+				
+				.blue-heading {
+					color: #1a1a1a;
+					font-size: 32px;
+					font-weight: 700;
+					letter-spacing: 1px;
+					margin-bottom: 40px;
+				}
+				
+				.blue-btn {
+					display: inline-block;
+					background: #073eb7;
+					color: #fff;
+					padding: 14px 32px;
+					border-radius: 50px;
+					font-weight: 700;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					text-decoration: none;
+					transition: all 0.4s;
+					box-shadow: 0 5px 15px rgba(7,62,183,0.3);
+					border: none;
+					font-size: 14px;
+				}
+				
+				.blue-btn:hover {
+					transform: translateY(-3px);
+					box-shadow: 0 8px 25px rgba(7,62,183,0.4);
+					background: #04256d;
+				}
 			</style>
 			<!-- choose sec of the page -->
 			<section class="choose-sec container pad-t">
 				<div class="row">
 					<div class="col-xs-12 text-center">
-						<h3 class="main-heading gold-heading">WHY CHOOSE US</h3>
+						<h3 class="main-heading blue-heading">WHY CHOOSE US</h3>
 					</div>
 				</div>
 				<div class="row choose-container">
 					<div class="col-xs-12 col-sm-6">
 						<div class="image-gallery">
 							<div class="main-image">
-								<img src="images/gatesbg.jpg" alt="Our Team" class="img-responsive">
-								<div class="gold-overlay"></div>
+								<img src="images/solar-installation.jpg" alt="Our Team" class="img-responsive">
+								<div class="blue-overlay"></div>
 							</div>
 							<div class="image-grid">
 								<div class="grid-item">
 									<img src="images/2222.jpg" alt="Our Work" class="img-responsive">
-									<div class="gold-overlay"></div>
+									<div class="blue-overlay"></div>
 								</div>
 								<div class="grid-item">
 									<img src="images/3333.jpg" alt="Our Products" class="img-responsive">
-									<div class="gold-overlay"></div>
+									<div class="blue-overlay"></div>
 								</div>
 							</div>
 						</div>
@@ -456,7 +497,7 @@
 					<div class="col-xs-12 col-sm-6">
 						<ul class="benefits-list">
 							<li class="benefit-item">
-								<div class="gold-icon">
+								<div class="blue-icon">
 									<i class="fas fa-thumbs-up"></i>
 								</div>
 								<div class="benefit-content">
@@ -465,7 +506,7 @@
 								</div>
 							</li>
 							<li class="benefit-item">
-								<div class="gold-icon">
+								<div class="blue-icon">
 									<i class="fas fa-clock"></i>
 								</div>
 								<div class="benefit-content">
@@ -474,7 +515,7 @@
 								</div>
 							</li>
 							<li class="benefit-item">
-								<div class="gold-icon">
+								<div class="blue-icon">
 									<i class="fas fa-gem"></i>
 								</div>
 								<div class="benefit-content">
@@ -491,15 +532,7 @@
 			</section>
 			
 			<style>
-				/* Gold Themed Styling */
-				.gold-heading {
-					color: #1a1a1a;
-					font-size: 32px;
-					font-weight: 700;
-					letter-spacing: 1px;
-					margin-bottom: 40px;
-				}
-				
+				/* Blue Themed Styling */
 				.choose-container {
 					align-items: center;
 				}
@@ -532,19 +565,19 @@
 					height: 180px;
 				}
 				
-				.gold-overlay {
+				.blue-overlay {
 					position: absolute;
 					top: 0;
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(184,134,11,0.2) 100%);
+					background: linear-gradient(135deg, rgba(7,62,183,0.1) 0%, rgba(4,37,109,0.2) 100%);
 					opacity: 0;
 					transition: opacity 0.3s ease;
 				}
 				
-				.main-image:hover .gold-overlay,
-				.grid-item:hover .gold-overlay {
+				.main-image:hover .blue-overlay,
+				.grid-item:hover .blue-overlay {
 					opacity: 1;
 				}
 				
@@ -582,10 +615,10 @@
 					box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 				}
 				
-				.gold-icon {
+				.blue-icon {
 					width: 60px;
 					height: 60px;
-					background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+					background: linear-gradient(135deg, #073eb7 0%, #04256d 100%);
 					border-radius: 50%;
 					display: flex;
 					align-items: center;
@@ -593,7 +626,7 @@
 					flex-shrink: 0;
 					color: white;
 					font-size: 24px;
-					box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+					box-shadow: 0 5px 15px rgba(7,62,183,0.3);
 				}
 				
 				.benefit-content h4 {
@@ -609,32 +642,6 @@
 					line-height: 1.6;
 					margin: 0;
 				}
-				
-				/* Gold Button Styling */
-				.btn {
-					border-radius: 50px;
-					padding: 14px 32px;
-					font-weight: 700;
-					letter-spacing: 1.2px;
-					transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-					border: 2px solid #FFD700;
-					text-transform: uppercase;
-					font-size: 14px;
-					line-height: 1;
-					text-shadow: 0 1px 1px rgba(0,0,0,0.1);
-					display: inline-block;
-					text-align: center;
-					text-decoration: none;
-					background: #FFD700;
-					color: #1a1a1a;
-				}
-				
-				.btn:hover {
-					transform: translateY(-3px);
-					box-shadow: 0 8px 20px rgba(255, 200, 0, 0.3);
-					background: #FFC000;
-					border-color: #FFC000;
-				}
 			</style>
 			
 			<!-- Make sure to include Font Awesome in your head tag -->
@@ -643,7 +650,7 @@
 <section class="products-sec container pad-t">
     <div class="row">
         <div class="col-xs-12 text-center">
-            <h3 class="main-heading gold-heading">OUR PRODUCTS</h3>
+            <h3 class="main-heading blue-heading">OUR PRODUCTS</h3>
         </div>
     </div>
     <div class="row">
@@ -722,24 +729,16 @@
     
     <div class="row">
         <div class="col-xs-12 text-center" style="margin-top: 40px;">
-            <a href="products" class="gold-btn">View All Products</a>
+            <a href="products" class="blue-btn">View All Products</a>
         </div>
     </div>
 </section>
 
 <style>
-    /* Products Section Styling */
+    /* Products Section Styling - UPDATED TO BLUE */
     .products-sec {
         padding: 60px 0;
         background: #f9f9f9;
-    }
-    
-    .gold-heading {
-        color: #1a1a1a;
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        margin-bottom: 50px;
     }
     
     /* Product Card Styling */
@@ -781,7 +780,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, rgba(255,215,0,0.1) 0%, rgba(184,134,11,0.2) 100%);
+        background: linear-gradient(to bottom, rgba(7,62,183,0.1) 0%, rgba(4,37,109,0.2) 100%);
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -796,14 +795,14 @@
         right: 15px;
         width: 40px;
         height: 40px;
-        background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+        background: linear-gradient(135deg, #073eb7 0%, #04256d 100%);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
         font-size: 16px;
-        box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+        box-shadow: 0 5px 15px rgba(7,62,183,0.3);
         z-index: 2;
     }
     
@@ -825,11 +824,11 @@
         line-height: 1.5;
     }
     
-    /* Product Button Styling */
+    /* Product Button Styling - BLUE */
     .product-btn {
         display: inline-flex;
         align-items: center;
-        color: #FFD700;
+        color: #073eb7;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 12px;
@@ -844,34 +843,11 @@
     }
     
     .product-btn:hover {
-        color: #B8860B;
+        color: #04256d;
     }
     
     .product-btn:hover i {
         transform: translateX(5px);
-    }
-    
-    /* Gold Button Styling */
-    .gold-btn {
-        display: inline-block;
-        background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
-        color: #1a1a1a;
-        padding: 14px 32px;
-        border-radius: 50px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: all 0.4s;
-        box-shadow: 0 5px 15px rgba(255,215,0,0.3);
-        border: none;
-        font-size: 14px;
-    }
-    
-    .gold-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(255,200,0,0.4);
-        background: linear-gradient(135deg, #FFC000 0%, #A67C00 100%);
     }
     
     /* Responsive Adjustments */
@@ -880,7 +856,7 @@
             padding: 40px 0;
         }
         
-        .gold-heading {
+        .blue-heading {
             font-size: 28px;
             margin-bottom: 30px;
         }
@@ -891,39 +867,39 @@
     }
 </style>
 			<!-- help section of the page -->
-<section class="help-sec" style="background-color: #FFD700;">
+<section class="help-sec" style="background-color: #073eb7;">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xs-12 col-sm-8 offset-sm-2 text-center py-5">
+        <div class="row">
+            <div class="col-xs-12 text-center py-5">
                 <div class="holder">
-                    <h3 class="main-heading text-uppercase" style="color: #000; margin-bottom: 30px; font-weight: 700;">
+                    <h3 class="main-heading text-uppercase" style="color: #fff; margin-bottom: 30px; font-weight: 700;">
                         SECURE YOUR HOME AND BUSINESS<br>CONTACT US NOW!
                     </h3>
                     
-                    <div class="contact-items" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 30px;">
+                    <div class="contact-items" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 30px; padding-left: 0; padding-right: 0;">
                         <div class="contact-item" style="display: flex; align-items: center; gap: 10px;">
-                            <div style="background-color: #000; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-phone-alt" style="color: #FFD700; font-size: 16px;"></i>
+                            <div style="background-color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-phone-alt" style="color: #073eb7; font-size: 16px;"></i>
                             </div>
                             <div>
-                                <p style="margin: 0; color: #000; font-weight: 600;">Call Us</p>
-                                <a href="tel:+256756813313" style="color: #000; text-decoration: none; font-weight: 700;">+256 756 813313</a>
+                                <p style="margin: 0; color: #fff; font-weight: 600;">Call Us</p>
+                                <a href="tel:+256756813313" style="color: #fff; text-decoration: none; font-weight: 700;">+256 756 813313</a>
                             </div>
                         </div>
                         
                         <div class="contact-item" style="display: flex; align-items: center; gap: 10px;">
-                            <div style="background-color: #000; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-envelope" style="color: #FFD700; font-size: 16px;"></i>
+                            <div style="background-color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-envelope" style="color: #073eb7; font-size: 16px;"></i>
                             </div>
                             <div>
-                                <p style="margin: 0; color: #000; font-weight: 600;">Email Us</p>
-                                <a href="mailto:info@loyalsystemsultd.com" style="color: #000; text-decoration: none; font-weight: 700;">info@loyalsystemsultd.com</a>
+                                <p style="margin: 0; color: #fff; font-weight: 600;">Email Us</p>
+                                <a href="mailto:info@loyalsystemsultd.com" style="color: #fff; text-decoration: none; font-weight: 700;">info@loyalsystemsultd.com</a>
                             </div>
                         </div>
                     </div>
                     
                     <a href="contact" class="btn active text-uppercase" 
-                       style="background-color: #000; color: #FFD700; padding: 12px 40px; border-radius: 30px; font-weight: 700; letter-spacing: 1px; display: inline-block; text-decoration: none;">
+                       style="background-color: #fff; color: #073eb7; padding: 12px 40px; border-radius: 30px; font-weight: 700; letter-spacing: 1px; display: inline-block; text-decoration: none; border: 2px solid #fff;">
                         GET A QUOTATION
                     </a>
                 </div>
@@ -931,20 +907,17 @@
         </div>
     </div>
 </section>
-
-<!-- Add this in your head section to load Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 			<style>
-				.gold-pill-frame {
-					border: 3px solid #FFD700;
+				.blue-pill-frame {
+					border: 3px solid #073eb7;
 					border-radius: 100px;
-					height: 450px; /* Tall pill shape */
+					height: 450px;
 					width: auto;
 					display: inline-block;
 					overflow: hidden;
 					position: relative;
 					box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-					background: transparent; /* No white background */
+					background: transparent;
 				}
 				
 				.tall-pill-image {
@@ -955,12 +928,12 @@
 					transition: transform 0.5s ease;
 				}
 				
-				.gold-pill-frame:hover .tall-pill-image {
+				.blue-pill-frame:hover .tall-pill-image {
 					transform: scale(1.05);
 				}
 				
 				@media (max-width: 767px) {
-					.gold-pill-frame {
+					.blue-pill-frame {
 						height: 350px;
 						margin-top: 30px;
 					}
@@ -970,7 +943,7 @@
 			<section class="tech-sec container pad-t">
 				<div class="row">
 					<div class="col-xs-12 text-center">
-						<h3 class="main-heading gold-heading">INTEGRATING TECHNOLOGIES</h3>
+						<h3 class="main-heading blue-heading">INTEGRATING TECHNOLOGIES</h3>
 					</div>
 				</div>
 				<div class="row">
@@ -979,7 +952,7 @@
 						<div class="tech-card">
 							<div class="tech-img">
 								<img src="images/GM04.png" alt="Automatic Gates Motors" class="img-responsive">
-								<div class="gold-overlay"></div>
+								<div class="blue-overlay"></div>
 								<div class="tech-badge">
 									<i class="fas fa-robot"></i>
 								</div>
@@ -997,7 +970,7 @@
 						<div class="tech-card">
 							<div class="tech-img">
 								<img src="images/CM02.webp" alt="Latest CCTV Cameras" class="img-responsive">
-								<div class="gold-overlay"></div>
+								<div class="blue-overlay"></div>
 								<div class="tech-badge">
 									<i class="fas fa-video"></i>
 								</div>
@@ -1015,7 +988,7 @@
 						<div class="tech-card">
 							<div class="tech-img">
 								<img src="images/NEW03.jpeg" alt="Home Security Equipment" class="img-responsive">
-								<div class="gold-overlay"></div>
+								<div class="blue-overlay"></div>
 								<div class="tech-badge">
 									<i class="fas fa-shield-alt"></i>
 								</div>
@@ -1030,18 +1003,10 @@
 				</div>
 			</section>
 			<style>
-				/* Gold Themed Styling */
+				/* Blue Themed Styling for Tech Section */
 				.tech-sec {
 					padding: 60px 0;
 					background: #f9f9f9;
-				}
-				
-				.gold-heading {
-					color: #1a1a1a;
-					font-size: 32px;
-					font-weight: 700;
-					letter-spacing: 1px;
-					margin-bottom: 50px;
 				}
 				
 				/* Tech Card Styling */
@@ -1077,35 +1042,20 @@
 					transform: scale(1.05);
 				}
 				
-				.gold-overlay {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background: linear-gradient(to bottom, rgba(255,215,0,0.1) 0%, rgba(184,134,11,0.2) 100%);
-					opacity: 0;
-					transition: opacity 0.3s ease;
-				}
-				
-				.tech-card:hover .gold-overlay {
-					opacity: 1;
-				}
-				
 				.tech-badge {
 					position: absolute;
 					top: 20px;
 					right: 20px;
 					width: 50px;
 					height: 50px;
-					background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
+					background: linear-gradient(135deg, #073eb7 0%, #04256d 100%);
 					border-radius: 50%;
 					display: flex;
 					align-items: center;
 					justify-content: center;
 					color: white;
 					font-size: 20px;
-					box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+					box-shadow: 0 5px 15px rgba(7,62,183,0.3);
 					z-index: 2;
 				}
 				
@@ -1126,7 +1076,7 @@
 				}
 				
 				.tech-content h3 a:hover {
-					color: #B8860B;
+					color: #073eb7;
 				}
 				
 				.tech-content p {
@@ -1136,11 +1086,11 @@
 					line-height: 1.6;
 				}
 				
-				/* Gold Button Styling */
+				/* Tech Button Styling - BLUE */
 				.tech-btn {
 					display: inline-flex;
 					align-items: center;
-					color: #FFD700;
+					color: #073eb7;
 					font-weight: 600;
 					text-transform: uppercase;
 					font-size: 13px;
@@ -1155,7 +1105,7 @@
 				}
 				
 				.tech-btn:hover {
-					color: #B8860B;
+					color: #04256d;
 				}
 				
 				.tech-btn:hover i {

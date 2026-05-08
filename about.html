@@ -32,13 +32,13 @@
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/responsive.css">
     <style>
-        /* ----- card styles with yellow theme, centered, LARGER TEXT, 4 values cards forced on one line ----- */
+        /* ----- card styles with BLUE theme, centered, LARGER TEXT, 4 values cards forced on one line ----- */
         .leading-card,
         .mission-single-card,
         .why-card-single {
             background: #ffffff;
             border-radius: 28px;
-            padding: 4rem 3.5rem;  /* more padding */
+            padding: 4rem 3.5rem;
             margin: 40px auto;
             box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
             text-align: center;
@@ -87,9 +87,8 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: #f9c74f;
+            background: #073eb7;
         }
-        
         
         .services-grid {
             display: grid;
@@ -99,7 +98,6 @@
             margin-bottom: 30px;
         }
         
-        
         .values-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);  
@@ -107,7 +105,6 @@
             margin-top: 30px;
             margin-bottom: 30px;
         }
-        
         
         @media (max-width: 1100px) {
             .values-grid {
@@ -131,18 +128,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100%;  /* make all cards same height within row */
+            height: 100%;
         }
         .service-card:hover, .value-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 30px 50px rgba(0,0,0,0.08);
+            box-shadow: 0 30px 50px rgba(7,62,183,0.1);
         }
         .service-icon, .value-icon {
-            font-size: 4rem;  /* EVEN BIGGER ICONS */
-            color: #f9c74f;
+            font-size: 4rem;
+            color: #073eb7;
             margin-bottom: 25px;
-            background: #fff9e6;
-            width: 120px;  /* much bigger icon background */
+            background: #e8f0ff;
+            width: 120px;
             height: 120px;
             display: flex;
             align-items: center;
@@ -150,7 +147,7 @@
             border-radius: 32px;
         }
         .service-card h4, .value-card h4 {
-            font-size: 2.2rem;  /* MUCH BIGGER titles */
+            font-size: 2.2rem;
             font-weight: 800;
             margin-bottom: 20px;
             color: #1e2a41;
@@ -158,7 +155,7 @@
             line-height: 1.3;
         }
         .service-card p {
-            font-size: 1.4rem;  /* BIGGER description */
+            font-size: 1.4rem;
             line-height: 1.6;
             color: #4a5568;
             max-width: 100%;
@@ -176,37 +173,54 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            font-size: 1.4rem;  /* BIGGER bullet text */
+            font-size: 1.4rem;
             color: #4a5568;
             font-weight: 400;
             line-height: 1.5;
         }
         .value-card li i {
-            color: #f9c74f;
-            font-size: 1.8rem;  /* bigger check icon */
+            color: #073eb7;
+            font-size: 1.8rem;
             width: 30px;
         }
-        /* make value cards taller by increasing min-height */
         .value-card {
-            min-height: 320px;  /* ensures tallness */
+            min-height: 320px;
             justify-content: space-between;
         }
         .service-card {
-            min-height: 380px;  /* service cards also taller */
+            min-height: 380px;
         }
-        /* yellow theme accent */
         .service-icon i, .value-icon i {
-            color: #f9c74f;
-            font-size: 4rem;  /* ensure icons inherit size */
+            color: #073eb7;
+            font-size: 4rem;
         }
-        /* container adjustment */
         .container.custom-width { max-width: 1300px; }
         .holder { margin-bottom: 30px; }
+        
+        /* Button Styles - BLUE THEME */
+        .btn {
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 2px solid;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 1;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            background: #073eb7;
+            border-color: #073eb7;
+            color: #f0ebeb;
+        }
     </style>
 </head>
 <body>
 <div id="wrapper">
-    <!-- header of the page (unchanged) -->
+    <!-- header of the page -->
     <header id="header">
         <div class="header-area">
             <div class="container">
@@ -265,7 +279,7 @@
         </div>
     </header>
     <main id="main">
-        <!-- banner unchanged -->
+        <!-- banner -->
         <section class="banner bg-full overlay" style="background-image: url(images/contact.jpg);">
             <div class="container">
                 <div class="row">
@@ -279,7 +293,7 @@
             </div>
         </section>
 
-        <!-- ===== UPDATED SECTIONS: bigger text, values 4 in a row ===== -->
+        <!-- ===== UPDATED SECTIONS: BLUE THEME, bigger text, values 4 in a row ===== -->
         <section class="container">
             <!-- Leading company card -->
             <div class="leading-card">
@@ -313,7 +327,7 @@
                 </div>
             </div>
 
-            <!-- Our Values heading + 4 cards in one row (taller, bigger text) -->
+            <!-- Our Values heading + 4 cards in one row (taller, bigger text) - BLUE THEME -->
             <h2 class="section-heading">Our Values</h2>
             <div class="values-grid">
                 <div class="value-card">
@@ -341,7 +355,7 @@
                     <div class="value-icon"><i class="icon icon_lightbulb"></i></div>
                     <h4>Innovation</h4>
                     <ul>
-                        <li><i class="icon icon_check_alt2"></i>Always upto date with the latest technologies to provide the best solutions.</li>
+                        <li><i class="icon icon_check_alt2"></i>Always up to date with the latest technologies to provide the best solutions.</li>
                     </ul>
                 </div>
             </div>
@@ -352,9 +366,8 @@
                 <p>At Loyal Security Systems Uganda Limited, we're dedicated to providing personalized security solutions that meet the unique needs of our clients. Our team of experts is passionate about delivering exceptional service, and we're committed to building long-term relationships with our customers.</p>
             </div>
         </section>
-        <!-- ===== END ===== -->
 
-        <!-- promo box (unchanged) -->
+        <!-- promo box - UPDATED TO BLUE -->
         <div class="promo-box">
             <div class="container">
                 <div class="row">
@@ -365,7 +378,7 @@
         </div>
     </main>
 
-    <!-- footer (unchanged) -->
+    <!-- footer -->
     <footer id="footer">
         <div class="footer-holder">
             <div class="container">
