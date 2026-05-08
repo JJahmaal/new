@@ -15,30 +15,30 @@
 /* "Read More" button (outline style) */
 .main-slider .btn.active {
     background: transparent;
-    border-color: #FFD700;
-    color: #FFD700;
+    border-color: #073eb7;
+    color: #f2f4f9;
 }
 
 /* "Get Quotation" button (solid style) */ 
 .main-slider .btn:not(.active) {
-    background: #FFD700;
-    border-color: #FFD700;
-    color: #1a1a1a;
+    background: #073eb7;
+    border-color: #073eb7;
+    color: #f0ebeb;
 }
 
 /* Hover Effects */
 .main-slider .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 200, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(7, 62, 183, 0.4);
 }
 
 .main-slider .btn.active:hover {
-    background: rgba(255, 215, 0, 0.15);
+    background: rgba(4,37,109,0.25);
 }
 
 .main-slider .btn:not(.active):hover {
-    background: #FFC000;
-    border-color: #FFC000;
+    background: #04256d;
+    border-color: #04256d;
 }
 
 /* Button container */
