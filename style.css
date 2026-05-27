@@ -4733,3 +4733,22 @@ a:hover, a:focus, a.active {
 .service-detail .img-holder img:hover {
     border-radius: 4px; /* Changes on hover */
 }
+/* Only affects the solar content page */
+.service-detail.solar-content .fst,
+.service-detail.solar-content .scd {
+    float: none;
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.service-detail.solar-content h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.service-detail.solar-content h2:first-of-type {
+    margin-top: 0;
+}
