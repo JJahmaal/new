@@ -4,112 +4,118 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<!-- ======================== -->
-<!-- Core Business Pages -->
-<!-- ======================== -->
-<url>
-  <loc>https://www.loyalsystemsultd.com/</loc>
-  <lastmod>2025-05-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/about</loc>
-  <lastmod>2025-04-28</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/service</loc>
-  <lastmod>2025-05-05</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
+  <!-- Tier 1: Homepage -->
+  <url>
+    <loc>https://www.loyalsystemsultd.com/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
 
-<!-- ======================== -->
-<!-- Security Product Pages -->
-<!-- ======================== -->
-<url>
-  <loc>https://www.loyalsystemsultd.com/gates</loc>
-  <lastmod>2025-05-08</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/fence</loc>
-  <lastmod>2025-05-08</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/camera</loc>
-  <lastmod>2025-05-12</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/access</loc>
-  <lastmod>2025-05-03</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/alarm</loc>
-  <lastmod>2025-05-01</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/fire</loc>
-  <lastmod>2025-05-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/power</loc>
-  <lastmod>2025-05-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/network</loc>
-  <lastmod>2025-05-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/products</loc>
-  <lastmod>2025-05-07</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/accessories</loc>
-  <lastmod>2025-05-18</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
+  <!-- Tier 2: Key Pages (Service, Gates, Solar, Fence) -->
+  <url>
+    <loc>https://www.loyalsystemsultd.com/service</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/gates</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/solar-systems-in-uganda</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/fence</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 
-<!-- ======================== -->
-<!-- Content & Contact Pages -->
-<!-- ======================== -->
-<url>
-  <loc>https://www.loyalsystemsultd.com/blog</loc>
-  <lastmod>2025-05-13</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/contact</loc>
-  <lastmod>2025-05-20</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.50</priority>
-</url>
-<url>
-  <loc>https://www.loyalsystemsultd.com/faq</loc>
-  <lastmod>2025-04-15</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.40</priority>
-</url>
+  <!-- Tier 3: Important Security Products -->
+  <url>
+    <loc>https://www.loyalsystemsultd.com/camera</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/access</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/alarm</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/fire</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/power</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/network</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Tier 4: Standard Pages -->
+  <url>
+    <loc>https://www.loyalsystemsultd.com/about</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/products</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Tier 5: Content Pages -->
+  <url>
+    <loc>https://www.loyalsystemsultd.com/blog</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/accessories</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Tier 6: Low Priority -->
+  <url>
+    <loc>https://www.loyalsystemsultd.com/contact</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.loyalsystemsultd.com/faq</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
 
 </urlset>
